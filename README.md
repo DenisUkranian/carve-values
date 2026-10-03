@@ -8,6 +8,19 @@ Live website: https://denisukranian.github.io/carve-values/
 
 For a free GitHub account, set this repository to **Public**. In **Settings → Pages**, select **Deploy from a branch**, choose **main** and **/(root)**, then save. GitHub shows the live URL after deployment. Updates committed to `main` are published at the same address.
 
+## Site analytics
+
+GoatCounter integration is prepared in `analytics.js` but **disabled** until the owner creates an account and supplies its verified endpoint. No visits are being counted yet.
+
+1. Register manually at https://www.goatcounter.com/signup. GoatCounter offers free hosting for reasonable public usage. Its account terms require registration by a human.
+2. Set the site domain to `denisukranian.github.io`. Copy the public dashboard URL or the `/count` endpoint from the account's integration instructions. Never put a password or API token in this repository.
+3. Set `goatCounterEndpoint` in `analytics.js` to the verified `https://ACCOUNT.goatcounter.com/count` URL and update the `analytics.js` cache version in `index.html`. Publish the change to `main`.
+4. Open the live site and verify that a visit appears in the GoatCounter dashboard. Keep the dashboard private unless the owner asks to share its statistics.
+
+The loader runs only on the production GitHub Pages domain and this project's path. It counts page visits with GoatCounter's default session handling. It sends a constant page path and title, omits referral data and query strings, and disables automatic click events. It does not read calculator offers. Browsers that block the tracker will not be counted. Tracking starts only after activation; earlier visits cannot be reconstructed by this integration.
+
+This dashboard measures the live website. GitHub Insights → Traffic measures the repository and is a separate metric.
+
 ## Trade rules
 
 - The comparison is from your perspective: your offer is what you give, their offer is what you receive.
