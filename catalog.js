@@ -1,11 +1,11 @@
 window.CarveCatalog = [
   {
     "id": "bloop-kelp",
-    "name": "Bloop Kelp",
-    "rarity": "Super Secret",
+    "name": "Blood Kelp",
+    "rarity": "Secret",
     "normal": 100000,
     "mega": 700000,
-    "image": null
+    "image": "assets/blood-kelp-v2.webp"
   },
   {
     "id": "poisonous-mushroom",
@@ -21,7 +21,7 @@ window.CarveCatalog = [
     "rarity": "Super Secret",
     "normal": 70000,
     "mega": 400000,
-    "image": null
+    "image": "assets/tree-of-terrors-v2.webp"
   },
   {
     "id": "scorch-mushroom",
@@ -29,7 +29,7 @@ window.CarveCatalog = [
     "rarity": "Super Secret",
     "normal": 70000,
     "mega": 400000,
-    "image": null
+    "image": "assets/scorch-mushroom-v2.webp"
   },
   {
     "id": "kelp",
