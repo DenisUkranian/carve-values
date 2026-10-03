@@ -36,7 +36,7 @@ There are 34 items, including Tree of Terrors (**Super Secret**). Current refere
 | --- | --- | ---: | ---: |
 | Kelp | Super Secret | 5,000 | 20,000 |
 | Poisonous Mushroom | Transcendent | 5,000 | 17,000 |
-| Alien, Hyperwave, Voidstar | Transcendent | 10 | 5,000 |
+| Alien, Hyperwave, Voidstar | Transcendent | 10 | 7,000 |
 | Scorch Mushroom, Tree of Terrors | Super Secret | 5,000 | 40,000 |
 | Blood Kelp | Super Secret | 10,000 | 70,000 |
 

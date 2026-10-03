@@ -44,7 +44,7 @@ window.CarveCatalog = [
     "name": "Voidstar",
     "rarity": "Transcendent",
     "normal": 100,
-    "mega": 50000,
+    "mega": 70000,
     "image": "assets/voidstar.webp"
   },
   {
@@ -52,7 +52,7 @@ window.CarveCatalog = [
     "name": "Hyperwave",
     "rarity": "Transcendent",
     "normal": 100,
-    "mega": 50000,
+    "mega": 70000,
     "image": "assets/hyperwave.webp"
   },
   {
@@ -60,7 +60,7 @@ window.CarveCatalog = [
     "name": "Alien",
     "rarity": "Transcendent",
     "normal": 100,
-    "mega": 50000,
+    "mega": 70000,
     "image": "assets/alien.webp"
   },
   {
