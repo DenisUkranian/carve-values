@@ -11,7 +11,7 @@ window.CarveCatalog = [
     "id": "poisonous-mushroom",
     "name": "Poisonous Mushroom",
     "rarity": "Transcendent",
-    "normal": 70000,
+    "normal": 50000,
     "mega": 170000,
     "image": null
   },
@@ -19,7 +19,7 @@ window.CarveCatalog = [
     "id": "tree-of-terrors",
     "name": "Tree of Terrors",
     "rarity": "Super Secret",
-    "normal": 70000,
+    "normal": 50000,
     "mega": 400000,
     "image": "assets/tree-of-terrors-v2.webp"
   },
@@ -27,7 +27,7 @@ window.CarveCatalog = [
     "id": "scorch-mushroom",
     "name": "Scorch Mushroom",
     "rarity": "Super Secret",
-    "normal": 70000,
+    "normal": 50000,
     "mega": 400000,
     "image": "assets/scorch-mushroom-v2.webp"
   },
@@ -44,7 +44,7 @@ window.CarveCatalog = [
     "name": "Voidstar",
     "rarity": "Transcendent",
     "normal": 100,
-    "mega": 70000,
+    "mega": 50000,
     "image": "assets/voidstar.webp"
   },
   {
@@ -52,7 +52,7 @@ window.CarveCatalog = [
     "name": "Hyperwave",
     "rarity": "Transcendent",
     "normal": 100,
-    "mega": 70000,
+    "mega": 50000,
     "image": "assets/hyperwave.webp"
   },
   {
@@ -60,7 +60,7 @@ window.CarveCatalog = [
     "name": "Alien",
     "rarity": "Transcendent",
     "normal": 100,
-    "mega": 70000,
+    "mega": 50000,
     "image": "assets/alien.webp"
   },
   {

@@ -35,13 +35,13 @@ There are 34 items, including Tree of Terrors (**Super Secret**). Current refere
 | Item | Rarity | Normal | MEGA |
 | --- | --- | ---: | ---: |
 | Kelp | Super Secret | 5,000 | 20,000 |
-| Poisonous Mushroom | Transcendent | 7,000 | 17,000 |
-| Alien, Hyperwave, Voidstar | Transcendent | 10 | 7,000 |
-| Scorch Mushroom, Tree of Terrors | Super Secret | 7,000 | 40,000 |
+| Poisonous Mushroom | Transcendent | 5,000 | 17,000 |
+| Alien, Hyperwave, Voidstar | Transcendent | 10 | 5,000 |
+| Scorch Mushroom, Tree of Terrors | Super Secret | 5,000 | 40,000 |
 | Blood Kelp | Super Secret | 10,000 | 70,000 |
 
 32 item icons have been reconstructed at higher clarity from the supplied in-game screenshots. The transparent `assets/trees-hd-v1.webp` atlas and the individual `assets/*-v2.webp` icons are used across the catalog, offer rows and picker. These are enhanced reference illustrations, not original game asset exports. The original screenshot crops remain in `assets/`. The two remaining placeholders are Kelp and Poisonous Mushroom. Blood Kelp is Super Secret and uses the stable catalog ID (`bloop-kelp`).
 
-Prices in `catalog.js` are stored as integer tenths of a value unit: `1` means 0.1, `15` means 1.5, and `70000` means 7,000. This keeps sums and the 3% comparison exact. The prices are the owner's reference list, not live market data.
+Prices in `catalog.js` are stored as integer tenths of a value unit: `1` means 0.1, `15` means 1.5, and `50000` means 5,000. This keeps sums and the 3% comparison exact. The prices are the owner's reference list, not live market data.
 
 This is a standalone static website. Offer state is held in memory and resets on reload. Optional external fonts fall back to system fonts when unavailable. Not affiliated with Roblox or the game creators.
