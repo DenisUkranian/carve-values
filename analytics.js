@@ -3,7 +3,7 @@
 
   // Set this to the verified /count URL supplied by the owner's GoatCounter account.
   // Empty means disabled: no analytics script or requests are sent.
-  const goatCounterEndpoint = '';
+  const goatCounterEndpoint = 'https://vortoxfuga.goatcounter.com/count';
 
   if (!goatCounterEndpoint || location.hostname !== 'denisukranian.github.io' ||
       !location.pathname.startsWith('/carve-values/')) return;
