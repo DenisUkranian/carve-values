@@ -10,9 +10,9 @@ window.CarveCatalog = [
   {
     "id": "poisonous-mushroom",
     "name": "Poisonous Mushroom",
-    "rarity": "Super Secret",
+    "rarity": "Transcendent",
     "normal": 70000,
-    "mega": 400000,
+    "mega": 170000,
     "image": null
   },
   {
@@ -35,8 +35,8 @@ window.CarveCatalog = [
     "id": "kelp",
     "name": "Kelp",
     "rarity": "Super Secret",
-    "normal": 70000,
-    "mega": 400000,
+    "normal": 50000,
+    "mega": 200000,
     "image": null
   },
   {
@@ -44,7 +44,7 @@ window.CarveCatalog = [
     "name": "Voidstar",
     "rarity": "Transcendent",
     "normal": 100,
-    "mega": 4000,
+    "mega": 70000,
     "image": "assets/voidstar.webp"
   },
   {
@@ -52,7 +52,7 @@ window.CarveCatalog = [
     "name": "Hyperwave",
     "rarity": "Transcendent",
     "normal": 100,
-    "mega": 4000,
+    "mega": 70000,
     "image": "assets/hyperwave.webp"
   },
   {
@@ -60,7 +60,7 @@ window.CarveCatalog = [
     "name": "Alien",
     "rarity": "Transcendent",
     "normal": 100,
-    "mega": 4000,
+    "mega": 70000,
     "image": "assets/alien.webp"
   },
   {

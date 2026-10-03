@@ -4,6 +4,8 @@ An independent Carve Wood value list and trade calculator. Normal and MEGA are v
 
 ## Publish on GitHub Pages
 
+Live website: https://denisukranian.github.io/carve-values/
+
 For a free GitHub account, set this repository to **Public**. In **Settings → Pages**, select **Deploy from a branch**, choose **main** and **/(root)**, then save. GitHub shows the live URL after deployment. Updates committed to `main` are published at the same address.
 
 ## Trade rules
@@ -18,9 +20,17 @@ For a free GitHub account, set this repository to **Public**. In **Settings → 
 
 ## Catalog
 
-There are 34 items, including Tree of Terrors (**Super Secret**). Kelp, Poisonous Mushroom, Scorch Mushroom and Tree of Terrors each have Normal value **7,000** and MEGA value **40,000**. Bloop Kelp retains **10,000 / 70,000**.
+There are 34 items, including Tree of Terrors (**Super Secret**). Current reference values:
 
-29 item icons are taken from the supplied in-game screenshots. The five remaining placeholders are Bloop Kelp, Kelp, Poisonous Mushroom, Scorch Mushroom and Tree of Terrors.
+| Item | Rarity | Normal | MEGA |
+| --- | --- | ---: | ---: |
+| Kelp | Super Secret | 5,000 | 20,000 |
+| Poisonous Mushroom | Transcendent | 7,000 | 17,000 |
+| Alien, Hyperwave, Voidstar | Transcendent | 10 | 7,000 |
+| Scorch Mushroom, Tree of Terrors | Super Secret | 7,000 | 40,000 |
+| Bloop Kelp | Super Secret | 10,000 | 70,000 |
+
+29 item icons have been reconstructed at higher clarity from the supplied in-game screenshots. The transparent `assets/trees-hd-v1.webp` atlas is used across the catalog, offer rows and picker. These are enhanced reference illustrations, not original game asset exports. The original screenshot crops remain in `assets/`. The five remaining placeholders are Bloop Kelp, Kelp, Poisonous Mushroom, Scorch Mushroom and Tree of Terrors.
 
 Prices in `catalog.js` are stored as integer tenths of a value unit: `1` means 0.1, `15` means 1.5, and `70000` means 7,000. This keeps sums and the 3% comparison exact. The prices are the owner's reference list, not live market data.
 

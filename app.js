@@ -3,6 +3,14 @@
   const catalog = window.CarveCatalog;
   const core = window.CarveTrade;
   const byId = new Map(catalog.map(item => [item.id, item]));
+  // One transparent atlas keeps the restored icons sharp and avoids 29 downloads.
+  const iconSlots = new Map([
+    'acacia','alien','ash','birch','bubble','cloud',
+    'doom','glow','hyperwave','lightning','maple','night-blossom',
+    'nightmare-bloom','oak','palm','pine','purple-maple','redstar',
+    'sakura','starfall','sunset','tornado','voidstar','willow',
+    'magical-palm','astral','withered-rose','lunar','solar'
+  ].map((id, index) => [id, index]));
   const rarities = ['Common','Uncommon','Rare','Epic','Legendary','Mythical','Sacred','Ethereal','Celestial','Secret','Cosmic','Transcendent','Super Secret','Unspecified'];
   const rarityColors = {'Common':'#c6cec4','Uncommon':'#91cc83','Rare':'#94c8f7','Epic':'#d3a5f0','Legendary':'#e8ca82','Mythical':'#ed9ec7','Sacred':'#e2c98e','Ethereal':'#bbafee','Celestial':'#aac7ee','Secret':'#90d7e4','Cosmic':'#d59beb','Transcendent':'#dac9f8','Super Secret':'#d6ed9c','Unspecified':'#a6b1a9'};
   const state = {your:[], their:[], target:'your', pickerSide:'your', variants:{}, addQuantities:{}, layout:'list', toastTimer:null};
@@ -28,6 +36,10 @@
     state.toastTimer = setTimeout(() => $('toast').classList.remove('visible'), 2400);
   }
   function image(item, small = false) {
+    if (item.image && iconSlots.has(item.id)) {
+      const slot = iconSlots.get(item.id);
+      return '<span class="seed-art" role="img" aria-label="'+escape(item.name)+' tree" style="--seed-x:'+((slot % 6) * 20)+'%;--seed-y:'+(Math.floor(slot / 6) * 25)+'%"></span>';
+    }
     return item.image ? '<img src="'+escape(item.image)+'" alt="'+escape(item.name)+' in-game tree" '+(small?'':'loading="lazy" ')+'width="240" height="240">' : '<div class="placeholder">'+icon('image')+'<span>No image yet</span></div>';
   }
   function variantSwitch(item, context) {
