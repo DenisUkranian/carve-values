@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101715">
+  <meta name="description" content="Browse Carve Wood item values and compare trades. Switch any item between Normal and MEGA in one catalog.">
+  <title>Carve Values · Carve Wood trade calculator</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23101715'/%3E%3Cpath d='M11 12h18v5H16v11h13v5H11z' fill='%23b7f36b'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+  <script src="trade-core.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#calculator" class="brand" aria-label="Carve Values home"><span class="brand-mark" aria-hidden="true">C</span><span>CARVE<span class="brand-values">VALUES</span></span></a>
+      <nav aria-label="Main navigation" class="main-nav">
+        <a href="#calculator" id="nav-calculator" class="nav-link active">Trade calculator</a>
+        <a href="#values" id="nav-values" class="nav-link">Value list</a>
+      </nav>
+      <span class="game-label">CARVE WOOD</span>
+    </div>
+  </header>
+  <main id="main" class="shell" tabindex="-1">
+    <section id="calculator-view" aria-labelledby="calculator-title">
+      <div class="page-heading"><div><p class="eyebrow">TRADING TOOLS</p><h1 id="calculator-title">Check your trade.</h1><p class="subheading">Build both offers. See what you get back.</p></div><div class="trade-actions"><button id="swap" class="button secondary"><span data-icon="swap"></span>Swap offers</button><button id="clear-all" class="button quiet"><span data-icon="reset"></span>Clear</button></div></div>
+      <div class="offers-grid">
+        <section class="offer-panel your-panel" aria-labelledby="your-heading">
+          <div class="offer-heading"><div class="offer-label"><span class="side-marker" aria-hidden="true">01</span><div><h2 id="your-heading">Your offer</h2><p>You give</p></div></div><div class="offer-total"><span class="tiny-label">TOTAL VALUE</span><strong id="your-total">0</strong></div></div>
+          <div id="your-items" class="offer-items"></div>
+          <button class="add-offer" data-open-picker="your"><span data-icon="plus"></span>Add items to your offer</button>
+        </section>
+        <section class="offer-panel their-panel" aria-labelledby="their-heading">
+          <div class="offer-heading"><div class="offer-label"><span class="side-marker" aria-hidden="true">02</span><div><h2 id="their-heading">Their offer</h2><p>You receive</p></div></div><div class="offer-total"><span class="tiny-label">TOTAL VALUE</span><strong id="their-total">0</strong></div></div>
+          <div id="their-items" class="offer-items"></div>
+          <button class="add-offer" data-open-picker="their"><span data-icon="plus"></span>Add items to their offer</button>
+        </section>
+      </div>
+      <section id="trade-result" class="trade-result" aria-label="Trade comparison" aria-live="polite" aria-atomic="true"></section>
+      <p class="fairness-note">Fair means equal value, or a difference of up to 3% when your offer is worth more than 50.</p>
+      <div class="catalog-heading"><div><h2>Find your next item</h2><p>One item. Normal or MEGA.</p></div><div class="target-selector" role="group" aria-label="Choose which offer to add to"><span>Add to</span><button id="target-your" class="selected" aria-pressed="true" data-target="your">Your offer</button><button id="target-their" aria-pressed="false" data-target="their">Their offer</button></div></div>
+      <div class="catalog-toolbar">
+        <div class="search-wrap"><span data-icon="search"></span><input id="calc-search" type="search" placeholder="Search items…" aria-label="Search items to add to a trade" autocomplete="off"></div>
+        <select id="calc-rarity" aria-label="Filter trade items by rarity"></select>
+        <select id="calc-sort" aria-label="Sort trade items"><option value="value-desc">Normal: high to low</option><option value="value-asc">Normal: low to high</option><option value="name">Name: A–Z</option><option value="rarity">Rarity</option></select>
+      </div>
+      <p id="calc-count" class="results-count"></p>
+      <div id="calc-catalog" class="item-grid"></div>
+    </section>
+    <section id="values-view" hidden aria-labelledby="values-title">
+      <div class="page-heading"><div><p class="eyebrow">THE ITEM INDEX</p><h1 id="values-title">Every item. Every value.</h1><p class="subheading">Switch between Normal and MEGA without changing items.</p></div><span class="catalog-total">34<span>items</span></span></div>
+      <div class="catalog-toolbar values-toolbar">
+        <div class="search-wrap"><span data-icon="search"></span><input id="values-search" type="search" placeholder="Search items…" aria-label="Search the value list" autocomplete="off"></div>
+        <select id="values-rarity" aria-label="Filter value list by rarity"></select>
+        <select id="values-sort" aria-label="Sort value list"><option value="value-desc">Normal: high to low</option><option value="value-asc">Normal: low to high</option><option value="name">Name: A–Z</option><option value="rarity">Rarity</option></select>
+        <div class="view-switch" role="group" aria-label="Value list layout"><button id="layout-list" class="selected" aria-label="List view" aria-pressed="true"><span data-icon="list"></span></button><button id="layout-grid" aria-label="Grid view" aria-pressed="false"><span data-icon="grid"></span></button></div>
+      </div>
+      <div class="list-info"><p id="values-count" class="results-count"></p><span>Prices from the owner's list · 03 Oct 2026</span></div>
+      <div id="values-catalog" class="value-list"></div>
+    </section>
+    <footer class="site-footer"><div><span class="footer-brand">CARVE VALUES</span><p>Independent value list for Carve Wood. Not affiliated with Roblox or the game creators.</p></div><p>Values are reference points from the owner's price list.<br>MEGA changes the value, not the item.</p></footer>
+  </main>
+  <dialog id="picker" class="picker-dialog" aria-labelledby="picker-title">
+    <div class="picker-head"><div><p class="eyebrow">BUILD YOUR TRADE</p><h2 id="picker-title">Add to your offer</h2><p id="picker-summary"></p></div><button id="picker-close" class="icon-button" aria-label="Close item picker"><span data-icon="close"></span></button></div>
+    <div class="picker-controls"><div class="search-wrap"><span data-icon="search"></span><input id="picker-search" type="search" placeholder="Search items…" aria-label="Search in item picker" autocomplete="off"></div><select id="picker-rarity" aria-label="Filter item picker by rarity"></select></div>
+    <div class="picker-scroll"><p id="picker-count" class="results-count"></p><div id="picker-catalog" class="item-grid picker-grid"></div></div>
+    <div class="picker-foot"><span id="picker-foot-total"></span><button id="picker-done" class="button primary">Done</button></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">Enable JavaScript to use the item list and trade calculator.</p></noscript>
+</body>
+</html>
