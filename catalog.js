@@ -2,7 +2,7 @@ window.CarveCatalog = [
   {
     "id": "bloop-kelp",
     "name": "Blood Kelp",
-    "rarity": "Secret",
+    "rarity": "Super Secret",
     "normal": 100000,
     "mega": 700000,
     "image": "assets/blood-kelp-v2.webp"
